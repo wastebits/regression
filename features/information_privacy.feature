@@ -4,7 +4,7 @@ Feature: Information Privacy
     As a wastebits user
     I want to manage who can see my Information
 
-    Scenario: Create a private company
-    Scenario: Create a public company
-    Scenario: Create a private note
-    Scenario: Create a public note
+    Scenario: Private companies not accessible to unrelated users
+    Scenario: Public companies are accessible to all users
+    Scenario: I can log into a portal where I have an account
+    Scenario: I cannot log into a portal where I do not have an account
