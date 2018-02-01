@@ -4,8 +4,8 @@ Feature: Submit and Approve a Profile
  I want to be able to get my Waste Profile approved
 
   Scenario: Submit a waste profile for approval
-    Given I'm member of "Wastebits Cucumber Composter"
-    When I start a new Profile
+    Given I'm member of "Wastebits Cucumber Factory"
+    When I start a new Waste Stream
     And I specified the profile name "Rotten Cucumbers"
     And I specified the generator "Wastebits Cucumber Factory"
     And I specified the waste facility "Wastebits Cucumber Composter"
