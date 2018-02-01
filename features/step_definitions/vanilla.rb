@@ -6,7 +6,7 @@ Given("I'm member of {string}") do |string|
   # TODO: move email and password to application.yml
   email = @browser.text_field name: 'email'
   email.exists?
-  email.set 'psullivan+regression+approver@wastebits.com'
+  email.set 'psullivan+regression+customer@wastebits.com'
 
   password = @browser.text_field name: 'password'
   password.exists?
@@ -17,12 +17,11 @@ Given("I'm member of {string}") do |string|
   btn.click
 
   company_name = @browser.div text: string
-
   expect(company_name.exists?)
 end
 
-When("I start a new Profile") do
-  start_profile = @browser.span text: 'Start Profile'
+When("I start a new Waste Stream") do
+  start_profile = @browser.span text: 'Start Waste Stream'
   start_profile.click
 
   expect(profile_status).to eq('Draft')
@@ -44,7 +43,7 @@ When("I specified the generator {string}") do |string|
   search.set string
 
 
-  company = @browser.div(text: string)
+  company = @browser.div(text: string)[1]
   company.exists?
   company.click
 
